@@ -1,3 +1,4 @@
-﻿  lab1.cpp
-S:\TRPO_2023\lab1\lab1\lab1\lab1.cpp(91): warning C4715: List<int>::operator[]: значение возвращается не при всех путях выполнения
+﻿  2.cpp
+S:\TRPO_2023\lab1\lab1\lab1\2.cpp(13,15): warning C4101: err: неиспользованная локальная переменная
+S:\TRPO_2023\lab1\lab1\lab1\2.cpp(16): warning C4715: tan: значение возвращается не при всех путях выполнения
   lab1.vcxproj -> S:\TRPO_2023\lab1\lab1\x64\Debug\lab1.exe

@@ -91,7 +91,7 @@ template <class T> T& List<T>::operator[](const int index)
 }
 
 
-int main(int argc, char* argv[])
+int notmain(int argc, char* argv[])
 {	
     List<int> lst;
     lst.push_back(-1);
