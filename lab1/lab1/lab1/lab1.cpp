@@ -17,7 +17,7 @@ public:
     T& operator[](const int index); //перегрузка оператора для доступа к данным с возможностью изменения их
 
 private:
-    template <class T> class Node
+    class Node
     {
     public:
         Node* pNext;
@@ -29,8 +29,8 @@ private:
     };
 
     int size;
-    Node<T>* head;
-    Node<T>* tail;
+    Node* head;
+    Node* tail;
 };
 
 template <class T> List<T>::List(){
@@ -42,15 +42,15 @@ template <class T> List<T>::List(){
 
 template <class T> void List<T>::push_back(T data){
     if (head == nullptr) {
-        head = new Node<T>(data);
+        head = new Node(data);
         tail = head;
     }
     else {
-        Node<T>* current = this->head;
+        Node* current = this->head;
         while (current->pNext != nullptr) {
             current = current->pNext;
         }
-        current->pNext = new Node<T>(data);
+        current->pNext = new Node(data);
         tail = current->pNext;
     }
     size++;
@@ -61,8 +61,8 @@ template<class T> void List<T>::pop() {
         cout << "List is empty" << endl;
     }
     else {
-        Node<T>* current = this->head;
-        Node<T>* tmp = tail;
+        Node* current = this->head;
+        Node* tmp = tail;
         if (head == nullptr) {
             delete(tail);
         }
@@ -80,7 +80,7 @@ template<class T> void List<T>::pop() {
 template <class T> T& List<T>::operator[](const int index)
 {
     int cntr = 0;
-    Node<T>* current = this->head;
+    Node* current = this->head;
     while (current != nullptr) {
         if (cntr == index) {
             return current->data;
